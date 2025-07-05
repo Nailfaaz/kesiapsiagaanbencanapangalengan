@@ -3,4 +3,16 @@ const nextConfig = {
   reactStrictMode: true,
 };
 
-export default nextConfig;
+export default {
+  images: {
+    remotePatterns: [
+      {
+        protocol: 'https',
+        hostname: 'images.unsplash.com',
+        pathname: '/photo-*', // This pattern matches the Unsplash image paths
+      },
+    ],
+  },
+};
+
+
