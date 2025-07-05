@@ -11,7 +11,6 @@ export default function BencanaUmumPage() {
       title: 'Gempa Bumi',
       image: '/api/placeholder/600/400',
       alt: 'Gambar ilustrasi gempa bumi',
-      icon: '🌋',
       description:
         'Gempa bumi terjadi karena pergeseran lempeng tektonik yang melepaskan energi dalam bentuk gelombang seismik. Di Pangalengan, potensi gempa cukup tinggi karena berada di jalur Ring of Fire.',
       severity: 'Tinggi',
@@ -25,12 +24,11 @@ export default function BencanaUmumPage() {
       ]
     },
     {
-      title: 'Gunung Meletus',
+      title: 'Banjir',
       image: '/api/placeholder/600/400',
-      alt: 'Gambar ilustrasi gunung meletus',
-      icon: '🌋',
+      alt: 'Gambar ilustrasi Banjir',
       description:
-        'Gunung meletus disebabkan oleh tekanan magma yang mencari jalan keluar ke permukaan. Dengan adanya Gunung Windu, Wayang, dan Malabar di sekitar Pangalengan, risiko erupsi perlu diwaspadai.',
+        'Lorem Ipsum dolor sit amet, consectetur adipiscing elit. lorem ipsum dolor sit amet, consectetur adipiscing elit.',
       severity: 'Sedang',
       color: 'from-orange-500 to-red-500',
       tips: [
@@ -45,7 +43,6 @@ export default function BencanaUmumPage() {
       title: 'Tanah Longsor',
       image: '/api/placeholder/600/400',
       alt: 'Gambar ilustrasi tanah longsor',
-      icon: '🏔️',
       description:
         'Tanah longsor terjadi ketika tanah kehilangan kohesi akibat hujan deras, perubahan struktur tanah, atau aktivitas manusia. Kondisi topografi Pangalengan yang berbukit dan curah hujan tinggi meningkatkan risiko ini.',
       severity: 'Tinggi',
@@ -161,9 +158,6 @@ export default function BencanaUmumPage() {
                     }`}>
                       Risiko {disaster.severity}
                     </span>
-                  </div>
-                  <div className="absolute bottom-4 left-4">
-                    <span className="text-3xl">{disaster.icon}</span>
                   </div>
                 </div>
 
