@@ -7,120 +7,119 @@ export default function BencanaUmumPage() {
   const [modalContent, setModalContent] = useState(null);
 
   const disasters = [
-  {
-    title: 'Banjir',
-    image: '/api/placeholder/600/400',
-    alt: 'Gambar ilustrasi banjir',
-    description:
-      'Banjir adalah peristiwa meluapnya air ke daratan yang biasanya kering. Peristiwa ini dapat disebabkan oleh berbagai faktor dan dapat menimbulkan dampak serius terhadap kehidupan masyarakat.',
-    severity: 'Sedang',
-    color: 'from-blue-500 to-cyan-500',
-    tips: {
-      Penyebab: [
-        'Hujan deras dalam waktu lama',
-        'Sistem drainase yang buruk',
-        'Sungai meluap akibat curah hujan tinggi',
-        'Alih fungsi lahan yang mengurangi daya serap air'
-      ],
-      Dampak: [
-        'Merusak rumah dan fasilitas umum',
-        'Mengganggu aktivitas masyarakat sehari-hari',
-        'Menyebabkan penyakit dan pencemaran lingkungan'
-      ],
-      'Pra-Bencana': [
-        'Lakukan sosialisasi dan edukasi masyarakat tentang banjir',
-        'Bersihkan saluran air dan limbah secara rutin',
-        'Siapkan tas siaga berisi dokumen penting, makanan, dan perlengkapan darurat'
-      ],
-      [`Saat Banjir`]: [
-        'Tetap tenang dan kontrol diri',
-        'Segera evakuasi ke tempat yang lebih tinggi',
-        'Gunakan benda terapung jika perlu',
-        'Hindari kontak dengan aliran listrik atau kabel terendam air'
-      ],
-      'Pasca Bencana': [
-        'Periksa dan bersihkan sistem saluran air',
-        'Disinfeksi area yang terdampak banjir',
-        'Bangun kembali rumah dan lingkungan dengan memperhatikan risiko banjir di masa depan'
-      ]
-    }
-  },
-  {
-    title: 'Gempa Bumi',
-    image: '/api/placeholder/600/400',
-    alt: 'Gambar ilustrasi gempa bumi',
-    description:
-      'Gempa bumi adalah guncangan di permukaan bumi akibat pergeseran lempeng tektonik secara tiba-tiba yang bisa menyebabkan kerusakan.',
-    severity: 'Tinggi',
-    color: 'from-red-500 to-orange-500',
-    tips: {
-      Penyebab: [
-        'Gempa bumi di dasar laut',
-        'Letusan gunung api bawah laut',
-        'Longsoran dasar laut'
-      ],
-      Dampak: [
-        'Gelombang tinggi menyapu pesisir',
-        'Merusak bangunan dan infrastruktur',
-        'Menyebabkan korban jiwa dan pengungsian besar'
-      ],
-      'Pra-Bencana': [
-        'Sosialisasi masyarakat tentang peringatan dan cara menghadapi gempa bumi',
-        'Mempelajari lingkungan sekitar terhadap potensi gempa',
-        'Menyiapkan tas siaga berisi perlengkapan darurat'
-      ],
-      'Saat Gempa Bumi': [
-        'Berlindung di tempat aman seperti di bawah meja kuat',
-        'Menuju titik kumpul evakuasi dengan jalur yang aman',
-        'Jauhi bangunan yang mudah roboh atau pecahan kaca'
-      ],
-      'Pasca Bencana': [
-        'Jangan mendekat ke daerah yang terkena dampak langsung',
-        'Periksa kondisi lingkungan sekitar dengan hati-hati',
-        'Cari informasi dari sumber terpercaya seperti BMKG atau pemerintah setempat'
-      ]
-    }
-  },
-  {
-    title: 'Tanah Longsor',
-    image: '/api/placeholder/600/400',
-    alt: 'Gambar ilustrasi tanah longsor',
-    description:
-      'Tanah longsor adalah pergerakan tanah dan batu dari lereng yang dipicu oleh hujan deras, lereng curam, atau aktivitas manusia seperti penebangan liar.',
-    severity: 'Tinggi',
-    color: 'from-yellow-600 to-amber-500',
-    tips: {
-      Penyebab: [
-        'Curah hujan tinggi dan terus-menerus',
-        'Lereng curam dan kondisi tanah gembur',
-        'Penggundulan hutan atau penebangan liar',
-        'Getaran akibat gempa bumi atau aktivitas manusia (peledakan, lalu lintas berat)'
-      ],
-      Dampak: [
-        'Menimbun rumah, jalan, dan lahan pertanian',
-        'Mengakibatkan korban jiwa dan kerusakan harta benda',
-        'Mengganggu akses transportasi dan komunikasi',
-        'Memicu bencana sekunder seperti banjir bandang'
-      ],
-      'Pra-Bencana': [
-        'Sosialisasi kepada masyarakat tentang potensi dan bahaya tanah longsor',
-        'Memetakan wilayah rawan longsor dan memberi rambu peringatan',
-        'Tidak membangun pemukiman di lereng terjal atau zona rawan longsor',
-        'Menyiapkan tas siaga bencana'
-      ],
-      'Saat Tanah Longsor': [
-        'Segera evakuasi jika terdengar suara gemuruh atau retakan tanah ke tempat aman',
-        'Hindari daerah lereng yang terlihat retak, basah, atau mulai bergerak'
-      ],
-      'Pasca Bencana': [
-        'Jauhi lokasi longsor karena potensi longsor susulan',
-        'Periksa lingkungan sekitar, laporkan kerusakan atau korban ke pihak berwenang',
-        'Cari informasi dari sumber terpercaya'
-      ]
-    }
-  }
-]
-
+    {
+      title: "Banjir",
+      image: "/api/placeholder/600/400",
+      alt: "Gambar ilustrasi banjir",
+      description:
+        "Banjir adalah peristiwa meluapnya air ke daratan yang biasanya kering. Peristiwa ini dapat disebabkan oleh berbagai faktor dan dapat menimbulkan dampak serius terhadap kehidupan masyarakat.",
+      severity: "Sedang",
+      color: "from-blue-500 to-cyan-500",
+      tips: {
+        Penyebab: [
+          "Hujan deras dalam waktu lama",
+          "Sistem drainase yang buruk",
+          "Sungai meluap akibat curah hujan tinggi",
+          "Alih fungsi lahan yang mengurangi daya serap air",
+        ],
+        Dampak: [
+          "Merusak rumah dan fasilitas umum",
+          "Mengganggu aktivitas masyarakat sehari-hari",
+          "Menyebabkan penyakit dan pencemaran lingkungan",
+        ],
+        "Pra-Bencana": [
+          "Lakukan sosialisasi dan edukasi masyarakat tentang banjir",
+          "Bersihkan saluran air dan limbah secara rutin",
+          "Siapkan tas siaga berisi dokumen penting, makanan, dan perlengkapan darurat",
+        ],
+        [`Saat Banjir`]: [
+          "Tetap tenang dan kontrol diri",
+          "Segera evakuasi ke tempat yang lebih tinggi",
+          "Gunakan benda terapung jika perlu",
+          "Hindari kontak dengan aliran listrik atau kabel terendam air",
+        ],
+        "Pasca Bencana": [
+          "Periksa dan bersihkan sistem saluran air",
+          "Disinfeksi area yang terdampak banjir",
+          "Bangun kembali rumah dan lingkungan dengan memperhatikan risiko banjir di masa depan",
+        ],
+      },
+    },
+    {
+      title: "Gempa Bumi",
+      image: "/api/placeholder/600/400",
+      alt: "Gambar ilustrasi gempa bumi",
+      description:
+        "Gempa bumi adalah guncangan di permukaan bumi akibat pergeseran lempeng tektonik secara tiba-tiba yang bisa menyebabkan kerusakan.",
+      severity: "Tinggi",
+      color: "from-red-500 to-orange-500",
+      tips: {
+        Penyebab: [
+          "Gempa bumi di dasar laut",
+          "Letusan gunung api bawah laut",
+          "Longsoran dasar laut",
+        ],
+        Dampak: [
+          "Gelombang tinggi menyapu pesisir",
+          "Merusak bangunan dan infrastruktur",
+          "Menyebabkan korban jiwa dan pengungsian besar",
+        ],
+        "Pra-Bencana": [
+          "Sosialisasi masyarakat tentang peringatan dan cara menghadapi gempa bumi",
+          "Mempelajari lingkungan sekitar terhadap potensi gempa",
+          "Menyiapkan tas siaga berisi perlengkapan darurat",
+        ],
+        "Saat Gempa Bumi": [
+          "Berlindung di tempat aman seperti di bawah meja kuat",
+          "Menuju titik kumpul evakuasi dengan jalur yang aman",
+          "Jauhi bangunan yang mudah roboh atau pecahan kaca",
+        ],
+        "Pasca Bencana": [
+          "Jangan mendekat ke daerah yang terkena dampak langsung",
+          "Periksa kondisi lingkungan sekitar dengan hati-hati",
+          "Cari informasi dari sumber terpercaya seperti BMKG atau pemerintah setempat",
+        ],
+      },
+    },
+    {
+      title: "Tanah Longsor",
+      image: "/api/placeholder/600/400",
+      alt: "Gambar ilustrasi tanah longsor",
+      description:
+        "Tanah longsor adalah pergerakan tanah dan batu dari lereng yang dipicu oleh hujan deras, lereng curam, atau aktivitas manusia seperti penebangan liar.",
+      severity: "Tinggi",
+      color: "from-yellow-600 to-amber-500",
+      tips: {
+        Penyebab: [
+          "Curah hujan tinggi dan terus-menerus",
+          "Lereng curam dan kondisi tanah gembur",
+          "Penggundulan hutan atau penebangan liar",
+          "Getaran akibat gempa bumi atau aktivitas manusia (peledakan, lalu lintas berat)",
+        ],
+        Dampak: [
+          "Menimbun rumah, jalan, dan lahan pertanian",
+          "Mengakibatkan korban jiwa dan kerusakan harta benda",
+          "Mengganggu akses transportasi dan komunikasi",
+          "Memicu bencana sekunder seperti banjir bandang",
+        ],
+        "Pra-Bencana": [
+          "Sosialisasi kepada masyarakat tentang potensi dan bahaya tanah longsor",
+          "Memetakan wilayah rawan longsor dan memberi rambu peringatan",
+          "Tidak membangun pemukiman di lereng terjal atau zona rawan longsor",
+          "Menyiapkan tas siaga bencana",
+        ],
+        "Saat Tanah Longsor": [
+          "Segera evakuasi jika terdengar suara gemuruh atau retakan tanah ke tempat aman",
+          "Hindari daerah lereng yang terlihat retak, basah, atau mulai bergerak",
+        ],
+        "Pasca Bencana": [
+          "Jauhi lokasi longsor karena potensi longsor susulan",
+          "Periksa lingkungan sekitar, laporkan kerusakan atau korban ke pihak berwenang",
+          "Cari informasi dari sumber terpercaya",
+        ],
+      },
+    },
+  ];
 
   return (
     <div className="min-h-screen font-avenir bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-50">
@@ -156,46 +155,44 @@ export default function BencanaUmumPage() {
         </section>
 
         {/* Geology Info Card */}
-        <section className="max-w-7xl mx-auto px-8 pb-12">
-          <div className="bg-white/80 backdrop-blur-sm rounded-3xl shadow-xl border border-white/20 p-8 mb-12">
+        <section className="w-full max-w-5xl mx-auto px-4 sm:px-6 pb-12">
+          <div className="bg-white/80 backdrop-blur-sm rounded-3xl shadow-xl border border-white/20 p-6 sm:p-8 mb-12">
+            {/* Judul */}
             <div className="flex items-center mb-6">
               <div className="w-12 h-12 bg-gradient-to-br from-blue-500 to-purple-500 rounded-full flex items-center justify-center mr-4">
                 <span className="text-white text-xl">🌍</span>
               </div>
-              <h2 className="text-3xl font-bold text-slate-800">
+              <h2 className="text-2xl sm:text-3xl font-bold text-slate-800">
                 Kondisi Geologi di Pangalengan
               </h2>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-              <div className="bg-gradient-to-br from-blue-50 to-indigo-50 p-6 rounded-xl border-l-4 border-blue-500">
-                <h3 className="text-lg font-semibold text-slate-800 mb-3">
-                  Karakteristik Geologi
-                </h3>
-                <p className="text-slate-700 leading-relaxed text-sm">
-                  Kondisi geologi didominasi oleh batuan hasil erupsi dan
-                  endapan piroklastik Gunung Pangalengan purba.
-                </p>
+            {/* Konten utama */}
+            <div className="flex flex-col md:flex-row items-center md:items-start md:space-x-8 space-y-6 md:space-y-0">
+              {/* Logo UGM */}
+              <div className="relative w-full md:w-2/5 aspect-[3/1]">
+                <Image
+                  src="/images/logo-ugm.png"
+                  alt="Logo UGM"
+                  title="UGM"
+                  fill
+                  className="object-contain"
+                  sizes="(max-width: 768px) 100vw, 40vw"
+                />
               </div>
 
-              <div className="bg-gradient-to-br from-amber-50 to-orange-50 p-6 rounded-xl border-l-4 border-amber-500">
-                <h3 className="text-lg font-semibold text-slate-800 mb-3">
-                  Formasi Batuan
+              {/* Teks deskripsi */}
+              <div className="w-full md:w-3/5 bg-gradient-to-br from-amber-50 to-orange-50 p-6 rounded-xl border-l-4 border-amber-500 text-justify">
+                <h3 className="text-base sm:text-lg font-semibold text-black">
+                  Kondisi geologi Kecamatan Pangalengan didominasi oleh batuan
+                  hasil erupsi dan endapan piroklastik Gunung Pangalengan purba
+                  yang membentuk dataran dengan Situ Cileunca sebagai bekas
+                  kalderanya. Wilayah ini kemudian ditutupi produk gunung api
+                  muda seperti Gunung Windu, Wayang, dan Malabar yang berumur
+                  Kuarter Atas (Pleistosen), dengan batuan yang umumnya masih
+                  lepas-lepas. Struktur geologi utama berupa kelurusan
+                  sesar/patahan berarah tenggara–barat laut.
                 </h3>
-                <p className="text-slate-700 leading-relaxed text-sm">
-                  Ditutupi produk gunung api muda seperti Gunung Windu, Wayang,
-                  dan Malabar berumur Kuarter Atas.
-                </p>
-              </div>
-
-              <div className="bg-gradient-to-br from-red-50 to-pink-50 p-6 rounded-xl border-l-4 border-red-500">
-                <h3 className="text-lg font-semibold text-slate-800 mb-3">
-                  Struktur Geologi
-                </h3>
-                <p className="text-slate-700 leading-relaxed text-sm">
-                  Struktur geologi berupa kelurusan sesar berarah tenggara–barat
-                  laut yang mempengaruhi kerentanan.
-                </p>
               </div>
             </div>
           </div>
