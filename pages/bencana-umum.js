@@ -363,6 +363,31 @@ export default function BencanaUmumPage() {
           </div>
         )}
 
+        <section className="w-full max-w-5xl mx-auto px-4 sm:px-6 pb-12">
+          <div className="bg-white/80 backdrop-blur-sm rounded-3xl shadow-xl border border-white/20 p-6 sm:p-8 text-center">
+            <div className="flex flex-col items-center justify-center space-y-4">
+              <div className="w-12 h-12 bg-gradient-to-br from-green-500 to-teal-500 rounded-full flex items-center justify-center">
+                <span className="text-white text-xl">📢</span>
+              </div>
+              <h2 className="text-2xl sm:text-3xl font-bold text-slate-800">
+                Ingin mengakses konten sosialisasi?
+              </h2>
+              <p className="text-slate-600 text-base sm:text-lg">
+                Klik tombol di bawah untuk melihat materi dan informasi seputar
+                bencana.
+              </p>
+              <button
+                onClick={() => {
+                  /* ganti dengan aksi navigasi/link Anda */
+                }}
+                className="mt-4 px-6 py-3 bg-gradient-to-r from-blue-500 to-purple-500 text-white font-semibold rounded-lg hover:from-blue-600 hover:to-purple-600 transition-all duration-300 transform hover:scale-105"
+              >
+                Lihat Konten Sosialisasi
+              </button>
+            </div>
+          </div>
+        </section>
+
         {/* Back to Home */}
         <section className="max-w-7xl mx-auto px-8 py-8 text-center">
           <Link
