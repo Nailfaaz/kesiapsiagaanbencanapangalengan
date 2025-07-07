@@ -1,61 +1,126 @@
-import { useState } from 'react';
-import Image from 'next/image';
-import Link from 'next/link';
-import Header from '../components/Header';
+import { useState } from "react";
+import Image from "next/image";
+import Link from "next/link";
+import Header from "../components/Header";
 
 export default function BencanaUmumPage() {
   const [modalContent, setModalContent] = useState(null);
 
   const disasters = [
-    {
-      title: 'Gempa Bumi',
-      image: '/api/placeholder/600/400',
-      alt: 'Gambar ilustrasi gempa bumi',
-      description:
-        'Gempa bumi terjadi karena pergeseran lempeng tektonik yang melepaskan energi dalam bentuk gelombang seismik. Di Pangalengan, potensi gempa cukup tinggi karena berada di jalur Ring of Fire.',
-      severity: 'Tinggi',
-      color: 'from-red-500 to-orange-500',
-      tips: [
-        'Kenali tanda-tanda gempa seperti getaran ringan',
-        'Siapkan tas siaga berisi obat-obatan dan dokumen penting',
-        'Latih prosedur drop, cover, dan hold on',
-        'Identifikasi tempat aman di rumah dan kantor',
-        'Buat rencana titik kumpul keluarga'
-      ]
-    },
-    {
-      title: 'Banjir',
-      image: '/api/placeholder/600/400',
-      alt: 'Gambar ilustrasi Banjir',
-      description:
-        'Lorem Ipsum dolor sit amet, consectetur adipiscing elit. lorem ipsum dolor sit amet, consectetur adipiscing elit.',
-      severity: 'Sedang',
-      color: 'from-orange-500 to-red-500',
-      tips: [
-        'Pantau status aktivitas gunung api dari PVMBG',
-        'Siapkan masker untuk melindungi dari abu vulkanik',
-        'Ketahui jalur evakuasi dari zona bahaya',
-        'Simpan air bersih dan makanan untuk beberapa hari',
-        'Lindungi ternak dan tanaman dari abu vulkanik'
-      ]
-    },
-    {
-      title: 'Tanah Longsor',
-      image: '/api/placeholder/600/400',
-      alt: 'Gambar ilustrasi tanah longsor',
-      description:
-        'Tanah longsor terjadi ketika tanah kehilangan kohesi akibat hujan deras, perubahan struktur tanah, atau aktivitas manusia. Kondisi topografi Pangalengan yang berbukit dan curah hujan tinggi meningkatkan risiko ini.',
-      severity: 'Tinggi',
-      color: 'from-amber-500 to-yellow-500',
-      tips: [
-        'Hindari membangun di lereng curam dan area rawan longsor',
-        'Perhatikan tanda-tanda longsor seperti retakan tanah',
-        'Buat sistem drainase yang baik di sekitar rumah',
-        'Tanam vegetasi untuk menguatkan struktur tanah',
-        'Siapkan jalur evakuasi alternatif'
+  {
+    title: 'Banjir',
+    image: '/api/placeholder/600/400',
+    alt: 'Gambar ilustrasi banjir',
+    description:
+      'Banjir adalah peristiwa meluapnya air ke daratan yang biasanya kering. Peristiwa ini dapat disebabkan oleh berbagai faktor dan dapat menimbulkan dampak serius terhadap kehidupan masyarakat.',
+    severity: 'Sedang',
+    color: 'from-blue-500 to-cyan-500',
+    tips: {
+      Penyebab: [
+        'Hujan deras dalam waktu lama',
+        'Sistem drainase yang buruk',
+        'Sungai meluap akibat curah hujan tinggi',
+        'Alih fungsi lahan yang mengurangi daya serap air'
+      ],
+      Dampak: [
+        'Merusak rumah dan fasilitas umum',
+        'Mengganggu aktivitas masyarakat sehari-hari',
+        'Menyebabkan penyakit dan pencemaran lingkungan'
+      ],
+      'Pra-Bencana': [
+        'Lakukan sosialisasi dan edukasi masyarakat tentang banjir',
+        'Bersihkan saluran air dan limbah secara rutin',
+        'Siapkan tas siaga berisi dokumen penting, makanan, dan perlengkapan darurat'
+      ],
+      [`Saat Banjir`]: [
+        'Tetap tenang dan kontrol diri',
+        'Segera evakuasi ke tempat yang lebih tinggi',
+        'Gunakan benda terapung jika perlu',
+        'Hindari kontak dengan aliran listrik atau kabel terendam air'
+      ],
+      'Pasca Bencana': [
+        'Periksa dan bersihkan sistem saluran air',
+        'Disinfeksi area yang terdampak banjir',
+        'Bangun kembali rumah dan lingkungan dengan memperhatikan risiko banjir di masa depan'
       ]
     }
-  ];
+  },
+  {
+    title: 'Gempa Bumi',
+    image: '/api/placeholder/600/400',
+    alt: 'Gambar ilustrasi gempa bumi',
+    description:
+      'Gempa bumi adalah guncangan di permukaan bumi akibat pergeseran lempeng tektonik secara tiba-tiba yang bisa menyebabkan kerusakan.',
+    severity: 'Tinggi',
+    color: 'from-red-500 to-orange-500',
+    tips: {
+      Penyebab: [
+        'Gempa bumi di dasar laut',
+        'Letusan gunung api bawah laut',
+        'Longsoran dasar laut'
+      ],
+      Dampak: [
+        'Gelombang tinggi menyapu pesisir',
+        'Merusak bangunan dan infrastruktur',
+        'Menyebabkan korban jiwa dan pengungsian besar'
+      ],
+      'Pra-Bencana': [
+        'Sosialisasi masyarakat tentang peringatan dan cara menghadapi gempa bumi',
+        'Mempelajari lingkungan sekitar terhadap potensi gempa',
+        'Menyiapkan tas siaga berisi perlengkapan darurat'
+      ],
+      'Saat Gempa Bumi': [
+        'Berlindung di tempat aman seperti di bawah meja kuat',
+        'Menuju titik kumpul evakuasi dengan jalur yang aman',
+        'Jauhi bangunan yang mudah roboh atau pecahan kaca'
+      ],
+      'Pasca Bencana': [
+        'Jangan mendekat ke daerah yang terkena dampak langsung',
+        'Periksa kondisi lingkungan sekitar dengan hati-hati',
+        'Cari informasi dari sumber terpercaya seperti BMKG atau pemerintah setempat'
+      ]
+    }
+  },
+  {
+    title: 'Tanah Longsor',
+    image: '/api/placeholder/600/400',
+    alt: 'Gambar ilustrasi tanah longsor',
+    description:
+      'Tanah longsor adalah pergerakan tanah dan batu dari lereng yang dipicu oleh hujan deras, lereng curam, atau aktivitas manusia seperti penebangan liar.',
+    severity: 'Tinggi',
+    color: 'from-yellow-600 to-amber-500',
+    tips: {
+      Penyebab: [
+        'Curah hujan tinggi dan terus-menerus',
+        'Lereng curam dan kondisi tanah gembur',
+        'Penggundulan hutan atau penebangan liar',
+        'Getaran akibat gempa bumi atau aktivitas manusia (peledakan, lalu lintas berat)'
+      ],
+      Dampak: [
+        'Menimbun rumah, jalan, dan lahan pertanian',
+        'Mengakibatkan korban jiwa dan kerusakan harta benda',
+        'Mengganggu akses transportasi dan komunikasi',
+        'Memicu bencana sekunder seperti banjir bandang'
+      ],
+      'Pra-Bencana': [
+        'Sosialisasi kepada masyarakat tentang potensi dan bahaya tanah longsor',
+        'Memetakan wilayah rawan longsor dan memberi rambu peringatan',
+        'Tidak membangun pemukiman di lereng terjal atau zona rawan longsor',
+        'Menyiapkan tas siaga bencana'
+      ],
+      'Saat Tanah Longsor': [
+        'Segera evakuasi jika terdengar suara gemuruh atau retakan tanah ke tempat aman',
+        'Hindari daerah lereng yang terlihat retak, basah, atau mulai bergerak'
+      ],
+      'Pasca Bencana': [
+        'Jauhi lokasi longsor karena potensi longsor susulan',
+        'Periksa lingkungan sekitar, laporkan kerusakan atau korban ke pihak berwenang',
+        'Cari informasi dari sumber terpercaya'
+      ]
+    }
+  }
+]
+
 
   return (
     <div className="min-h-screen font-avenir bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-50">
@@ -71,7 +136,9 @@ export default function BencanaUmumPage() {
         {/* Breadcrumb */}
         <section className="max-w-7xl mx-auto px-8 py-4">
           <nav className="flex items-center space-x-2 text-sm text-slate-600">
-            <Link href="/" className="hover:text-blue-600 transition-colors">Beranda</Link>
+            <Link href="/" className="hover:text-blue-600 transition-colors">
+              Beranda
+            </Link>
             <span>›</span>
             <span className="text-slate-800 font-medium">Bencana Umum</span>
           </nav>
@@ -83,51 +150,66 @@ export default function BencanaUmumPage() {
             Bencana Alam Pangalengan
           </h1>
           <p className="text-xl text-slate-600 max-w-3xl mx-auto">
-            Memahami potensi bencana alam di wilayah Pangalengan untuk meningkatkan kesiapsiagaan masyarakat
+            Memahami potensi bencana alam di wilayah Pangalengan untuk
+            meningkatkan kesiapsiagaan masyarakat
           </p>
         </section>
 
         {/* Geology Info Card */}
         <section className="max-w-7xl mx-auto px-8 pb-12">
-        <div className="bg-white/80 backdrop-blur-sm rounded-3xl shadow-xl border border-white/20 p-8 mb-12">
+          <div className="bg-white/80 backdrop-blur-sm rounded-3xl shadow-xl border border-white/20 p-8 mb-12">
             <div className="flex items-center mb-6">
-            <div className="w-12 h-12 bg-gradient-to-br from-blue-500 to-purple-500 rounded-full flex items-center justify-center mr-4">
+              <div className="w-12 h-12 bg-gradient-to-br from-blue-500 to-purple-500 rounded-full flex items-center justify-center mr-4">
                 <span className="text-white text-xl">🌍</span>
-            </div>
-            <h2 className="text-3xl font-bold text-slate-800">Kondisi Geologi di Pangalengan</h2>
+              </div>
+              <h2 className="text-3xl font-bold text-slate-800">
+                Kondisi Geologi di Pangalengan
+              </h2>
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            <div className="bg-gradient-to-br from-blue-50 to-indigo-50 p-6 rounded-xl border-l-4 border-blue-500">
-                <h3 className="text-lg font-semibold text-slate-800 mb-3">Karakteristik Geologi</h3>
+              <div className="bg-gradient-to-br from-blue-50 to-indigo-50 p-6 rounded-xl border-l-4 border-blue-500">
+                <h3 className="text-lg font-semibold text-slate-800 mb-3">
+                  Karakteristik Geologi
+                </h3>
                 <p className="text-slate-700 leading-relaxed text-sm">
-                Kondisi geologi didominasi oleh batuan hasil erupsi dan endapan piroklastik Gunung Pangalengan purba.
+                  Kondisi geologi didominasi oleh batuan hasil erupsi dan
+                  endapan piroklastik Gunung Pangalengan purba.
                 </p>
-            </div>
+              </div>
 
-            <div className="bg-gradient-to-br from-amber-50 to-orange-50 p-6 rounded-xl border-l-4 border-amber-500">
-                <h3 className="text-lg font-semibold text-slate-800 mb-3">Formasi Batuan</h3>
+              <div className="bg-gradient-to-br from-amber-50 to-orange-50 p-6 rounded-xl border-l-4 border-amber-500">
+                <h3 className="text-lg font-semibold text-slate-800 mb-3">
+                  Formasi Batuan
+                </h3>
                 <p className="text-slate-700 leading-relaxed text-sm">
-                Ditutupi produk gunung api muda seperti Gunung Windu, Wayang, dan Malabar berumur Kuarter Atas.
+                  Ditutupi produk gunung api muda seperti Gunung Windu, Wayang,
+                  dan Malabar berumur Kuarter Atas.
                 </p>
-            </div>
+              </div>
 
-            <div className="bg-gradient-to-br from-red-50 to-pink-50 p-6 rounded-xl border-l-4 border-red-500">
-                <h3 className="text-lg font-semibold text-slate-800 mb-3">Struktur Geologi</h3>
+              <div className="bg-gradient-to-br from-red-50 to-pink-50 p-6 rounded-xl border-l-4 border-red-500">
+                <h3 className="text-lg font-semibold text-slate-800 mb-3">
+                  Struktur Geologi
+                </h3>
                 <p className="text-slate-700 leading-relaxed text-sm">
-                Struktur geologi berupa kelurusan sesar berarah tenggara–barat laut yang mempengaruhi kerentanan.
+                  Struktur geologi berupa kelurusan sesar berarah tenggara–barat
+                  laut yang mempengaruhi kerentanan.
                 </p>
+              </div>
             </div>
-            </div>
-        </div>
+          </div>
         </section>
 
         {/* Disaster Grid */}
         <section className="max-w-7xl mx-auto px-8 py-12">
           <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-slate-800 mb-4">Potensi Bencana Alam</h2>
+            <h2 className="text-3xl font-bold text-slate-800 mb-4">
+              Potensi Bencana Alam
+            </h2>
             <p className="text-lg text-slate-600 max-w-2xl mx-auto">
-              Klik pada setiap kartu untuk mempelajari lebih lanjut tentang jenis bencana dan tips kesiapsiagaan
+              Klik pada setiap kartu untuk mempelajari lebih lanjut tentang
+              jenis bencana dan tips kesiapsiagaan
             </p>
           </div>
 
@@ -138,10 +220,12 @@ export default function BencanaUmumPage() {
                 className="group relative overflow-hidden rounded-2xl bg-white/80 backdrop-blur-sm shadow-xl border border-white/20 hover:shadow-2xl transition-all duration-500 transform hover:scale-105 hover:-translate-y-2 cursor-pointer"
                 onClick={() => setModalContent(disaster)}
                 style={{
-                  animation: `fadeInUp 0.6s ease-out ${index * 0.15}s both`
+                  animation: `fadeInUp 0.6s ease-out ${index * 0.15}s both`,
                 }}
               >
-                <div className={`absolute inset-0 bg-gradient-to-br ${disaster.color} opacity-0 group-hover:opacity-10 transition-opacity duration-300`}></div>
+                <div
+                  className={`absolute inset-0 bg-gradient-to-br ${disaster.color} opacity-0 group-hover:opacity-10 transition-opacity duration-300`}
+                ></div>
                 <div className="relative h-48 overflow-hidden">
                   <Image
                     src={disaster.image}
@@ -152,10 +236,15 @@ export default function BencanaUmumPage() {
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent"></div>
                   <div className="absolute top-4 right-4">
-                    <span className={`px-3 py-1 rounded-full text-xs font-semibold text-white ${
-                      disaster.severity === 'Tinggi' ? 'bg-red-500' :
-                      disaster.severity === 'Sedang' ? 'bg-orange-500' : 'bg-yellow-500'
-                    }`}>
+                    <span
+                      className={`px-3 py-1 rounded-full text-xs font-semibold text-white ${
+                        disaster.severity === "Tinggi"
+                          ? "bg-red-500"
+                          : disaster.severity === "Sedang"
+                          ? "bg-orange-500"
+                          : "bg-yellow-500"
+                      }`}
+                    >
                       Risiko {disaster.severity}
                     </span>
                   </div>
@@ -166,7 +255,9 @@ export default function BencanaUmumPage() {
                     {disaster.title}
                   </h3>
                   <p className="text-slate-600 text-sm mb-4 leading-relaxed">
-                    {disaster.description.length > 120 ? disaster.description.slice(0, 120) + '...' : disaster.description}
+                    {disaster.description.length > 120
+                      ? disaster.description.slice(0, 120) + "..."
+                      : disaster.description}
                   </p>
                   <div className="w-full bg-gradient-to-r from-blue-500 to-purple-500 text-white font-semibold py-3 px-4 rounded-lg text-center transition-all duration-300 transform group-hover:scale-105">
                     Klik untuk Detail
@@ -182,45 +273,86 @@ export default function BencanaUmumPage() {
           <div className="fixed inset-0 bg-black/50 backdrop-blur-sm flex items-center justify-center p-4 z-50">
             <div className="bg-white rounded-2xl max-w-2xl w-full max-h-[90vh] overflow-y-auto shadow-2xl">
               <div className="p-8">
+                {/* Header */}
                 <div className="flex items-center justify-between mb-6">
                   <div className="flex items-center space-x-3">
-                    <span className="text-3xl">{modalContent.icon || '🌍'}</span>
-                    <h3 className="text-2xl font-bold text-slate-800">{modalContent.title}</h3>
+                    <span className="text-3xl">
+                      {modalContent.icon || "🌍"}
+                    </span>
+                    <h3 className="text-2xl font-bold text-slate-800">
+                      {modalContent.title}
+                    </h3>
                   </div>
                   <button
                     onClick={() => setModalContent(null)}
                     className="p-2 rounded-full hover:bg-slate-100 transition-colors"
                   >
-                    <svg className="w-6 h-6 text-slate-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                    <svg
+                      className="w-6 h-6 text-slate-600"
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth={2}
+                        d="M6 18L18 6M6 6l12 12"
+                      />
                     </svg>
                   </button>
                 </div>
 
-                <div className={`p-4 rounded-xl bg-gradient-to-r ${modalContent.color} text-white mb-6`}>
+                {/* Risiko */}
+                <div
+                  className={`p-4 rounded-xl bg-gradient-to-r ${modalContent.color} text-white mb-6`}
+                >
                   <div className="flex items-center justify-between">
                     <span className="font-semibold">Tingkat Risiko</span>
                     <span className="font-bold">{modalContent.severity}</span>
                   </div>
                 </div>
 
+                {/* Deskripsi */}
                 <div className="bg-slate-50 p-6 rounded-xl mb-6">
-                  <h4 className="font-semibold text-slate-800 mb-3">Deskripsi Bencana</h4>
-                  <p className="text-slate-700 leading-relaxed">{modalContent.description}</p>
+                  <h4 className="font-semibold text-slate-800 mb-3">
+                    Deskripsi Bencana
+                  </h4>
+                  <p className="text-slate-700 leading-relaxed">
+                    {modalContent.description}
+                  </p>
                 </div>
 
+                {/* Tips per Kategori */}
                 <div className="bg-blue-50 p-6 rounded-xl">
-                  <h4 className="font-semibold text-slate-800 mb-3">Tips Kesiapsiagaan</h4>
-                  <ul className="space-y-2 text-slate-700">
-                    {modalContent.tips.map((tip, index) => (
-                      <li key={index} className="flex items-start space-x-2">
-                        <div className="w-2 h-2 bg-blue-500 rounded-full mt-2 flex-shrink-0"></div>
-                        <span>{tip}</span>
-                      </li>
-                    ))}
-                  </ul>
+                  <h4 className="font-semibold text-slate-800 mb-3">
+                    Tips Kesiapsiagaan
+                  </h4>
+                  <div className="space-y-6 text-slate-700">
+                    {Object.entries(modalContent.tips).map(
+                      ([category, tips], idx) => (
+                        <div key={idx}>
+                          <h5 className="font-semibold text-slate-800 mb-2">
+                            {category}
+                          </h5>
+                          <ul className="space-y-2">
+                            {tips.map((tip, index) => (
+                              <li
+                                key={index}
+                                className="flex items-start space-x-2"
+                              >
+                                <div className="w-2 h-2 bg-blue-500 rounded-full mt-2 flex-shrink-0"></div>
+                                <span>{tip}</span>
+                              </li>
+                            ))}
+                          </ul>
+                        </div>
+                      )
+                    )}
+                  </div>
                 </div>
 
+                {/* Tombol Tutup */}
                 <div className="flex justify-end mt-8">
                   <button
                     onClick={() => setModalContent(null)}
@@ -240,8 +372,18 @@ export default function BencanaUmumPage() {
             href="/"
             className="inline-flex items-center space-x-2 px-8 py-4 bg-white/80 backdrop-blur-sm text-slate-800 font-semibold rounded-2xl shadow-lg hover:shadow-xl border border-white/20 transition-all duration-300 transform hover:scale-105 focus:outline-none focus:ring-4 focus:ring-blue-500/20"
           >
-            <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 19l-7-7m0 0l7-7m-7 7h18" />
+            <svg
+              className="w-5 h-5"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth={2}
+                d="M10 19l-7-7m0 0l7-7m-7 7h18"
+              />
             </svg>
             <span>Kembali ke Beranda</span>
           </Link>
