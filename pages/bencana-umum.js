@@ -169,16 +169,16 @@ export default function BencanaUmumPage() {
 
             {/* Konten utama */}
             <div className="flex flex-col md:flex-row items-center md:items-start md:space-x-8 space-y-6 md:space-y-0">
-              {/* Logo UGM */}
-              <div className="relative w-full md:w-2/5 aspect-[3/1]">
+              <div className="w-full md:w-2/5 mx-[2vw] my-4">
                 <Image
-                  src="/images/logo-ugm.png"
+                  src="/images/MapGeologi.jpg"
                   alt="Logo UGM"
                   title="UGM"
-                  fill
-                  className="object-contain"
-                  sizes="(max-width: 768px) 100vw, 40vw"
+                  width={600}
+                  height={200}
+                  className="object-contain w-full"
                 />
+                <p className="text-base text-[0.5vw] font-semibold text-black justify-center "> Peta Geologi dan Stratigrafi Regional Bandung Selatan (Sillitongga,1993)</p>
               </div>
 
               {/* Teks deskripsi */}
