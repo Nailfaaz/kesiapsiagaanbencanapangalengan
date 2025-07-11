@@ -8,114 +8,131 @@ export default function TasSiagaBencanaPage() {
   const [modalContent, setModalContent] = useState(null);
 
   const categories = [
-    { id: 'all', name: 'Semua Item', icon: '📦', color: 'from-blue-500 to-purple-500' },
-    { id: 'medical', name: 'Medis', icon: '🏥', color: 'from-red-500 to-pink-500' },
-    { id: 'food', name: 'Makanan', icon: '🍞', color: 'from-green-500 to-emerald-500' },
-    { id: 'tools', name: 'Peralatan', icon: '🔧', color: 'from-orange-500 to-amber-500' },
-    { id: 'communication', name: 'Komunikasi', icon: '📡', color: 'from-purple-500 to-indigo-500' },
-    { id: 'clothing', name: 'Pakaian', icon: '👕', color: 'from-cyan-500 to-blue-500' }
-  ];
+  { id: 'all', name: 'Semua', icon: '📦', color: 'from-slate-500 to-slate-700' },
+  { id: 'health', name: 'Kesehatan', icon: '🏥', color: 'from-red-500 to-pink-500' },
+  { id: 'identity', name: 'Identitas', icon: '🗂️', color: 'from-yellow-500 to-orange-500' },
+  { id: 'money', name: 'Uang', icon: '💵', color: 'from-green-500 to-emerald-500' },
+  { id: 'clothes', name: 'Pakaian', icon: '👕', color: 'from-cyan-500 to-blue-500' },
+  { id: 'communication', name: 'Komunikasi', icon: '📡', color: 'from-purple-500 to-indigo-500' },
+  { id: 'food', name: 'Makanan & Minuman', icon: '🍱', color: 'from-orange-500 to-amber-500' },
+  { id: 'tools', name: 'Peralatan Tambahan', icon: '🛠️', color: 'from-teal-500 to-lime-500' },
+];
+
 
   const contents = [
     {
-      title: 'Kotak P3K',
-      category: 'medical',
-      image: '/images/p3k.png',
-      alt: 'Kotak P3K lengkap',
-      description: 'Kotak P3K berisi obat-obatan dasar, perban, antiseptik, dan peralatan medis sederhana untuk pertolongan pertama.',
-      items: ['Perban elastis', 'Antiseptik', 'Obat pereda nyeri', 'Termometer', 'Sarung tangan medis', 'Gunting medis'],
-      priority: 'Sangat Penting',
-      quantity: '1 set',
-      tips: 'Periksa tanggal kedaluwarsa obat setiap 6 bulan sekali'
-    },
-    {
-      title: 'Air Minum',
-      category: 'food',
-      image: '/images/air-minum.png',
-      alt: 'Botol air minum',
-      description: 'Air minum bersih yang cukup untuk 3 hari, minimal 1 liter per orang per hari.',
-      items: ['Botol air 1.5L', 'Tablet purifikasi air', 'Botol kosong cadangan'],
-      priority: 'Sangat Penting',
-      quantity: '3 liter/orang',
-      tips: 'Ganti air setiap 6 bulan dan simpan di tempat sejuk'
-    },
-    {
-      title: 'Makanan Kaleng',
-      category: 'food',
-      image: '/images/makanan-kaleng.png',
-      alt: 'Makanan kaleng tahan lama',
-      description: 'Makanan kaleng dan makanan kering yang tahan lama untuk kebutuhan darurat.',
-      items: ['Kornet sapi', 'Susu kental manis', 'Biscuit kaleng', 'Mie instan', 'Buah kaleng'],
-      priority: 'Sangat Penting',
-      quantity: '3 hari persediaan',
-      tips: 'Pilih makanan yang tidak perlu dimasak atau mudah disiapkan'
-    },
-    {
-      title: 'Senter LED',
-      category: 'tools',
-      image: '/images/senter.png',
-      alt: 'Senter LED dengan baterai',
-      description: 'Senter LED dengan baterai cadangan atau senter yang dapat dicharge manual.',
-      items: ['Senter LED', 'Baterai AA cadangan', 'Lampu kepala', 'Senter dynamo'],
-      priority: 'Sangat Penting',
-      quantity: '2-3 buah',
-      tips: 'Tes senter setiap bulan dan pastikan baterai masih bagus'
-    },
-    {
-      title: 'Radio Darurat',
-      category: 'communication',
-      image: '/images/radio.png',
-      alt: 'Radio darurat portable',
-      description: 'Radio portable untuk mendapatkan informasi darurat dan komunikasi dengan tim penyelamat.',
-      items: ['Radio AM/FM', 'Radio weather band', 'Baterai cadangan', 'Earphone'],
-      priority: 'Penting',
-      quantity: '1 buah',
-      tips: 'Pilih radio yang bisa dicharge manual atau dengan solar panel'
-    },
-    {
-      title: 'Pakaian Ganti',
-      category: 'clothing',
-      image: '/images/pakaian.png',
-      alt: 'Pakaian ganti untuk darurat',
-      description: 'Pakaian ganti yang sesuai dengan cuaca dan kondisi darurat.',
-      items: ['Kaos dalam', 'Kaos lengan panjang', 'Celana panjang', 'Jaket hujan', 'Kaos kaki', 'Sepatu kuat'],
-      priority: 'Penting',
-      quantity: '2-3 set',
-      tips: 'Sesuaikan dengan iklim dan musim di daerah Anda'
-    },
-    {
-      title: 'Dokumentasi Penting',
-      category: 'tools',
-      image: '/images/dokumen.png',
-      alt: 'Dokumen penting dalam plastik kedap air',
-      description: 'Fotokopi dokumen penting dalam kantong plastik kedap air.',
-      items: ['KTP/Identitas', 'Sertifikat rumah', 'Polis asuransi', 'Kartu keluarga', 'Rekening bank'],
-      priority: 'Sangat Penting',
-      quantity: '1 set lengkap',
-      tips: 'Simpan dalam kantong plastik kedap air atau container waterproof'
-    },
-    {
-      title: 'Uang Tunai',
-      category: 'tools',
-      image: '/images/uang.png',
-      alt: 'Uang tunai untuk darurat',
-      description: 'Uang tunai dalam denominasi kecil untuk kebutuhan darurat.',
-      items: ['Uang kertas kecil', 'Uang logam', 'Kartu ATM'],
-      priority: 'Sangat Penting',
-      quantity: 'Secukupnya',
-      tips: 'Simpan uang dalam denominasi kecil dan dalam kantong kedap air'
-    },
-    {
-      title: 'Peralatan Kebersihan',
-      category: 'medical',
-      image: '/images/toiletries.png',
-      alt: 'Peralatan kebersihan pribadi',
-      description: 'Peralatan kebersihan pribadi untuk menjaga hygiene selama darurat.',
-      items: ['Sabun cair', 'Shampoo sachet', 'Sikat gigi', 'Pasta gigi', 'Tissue basah', 'Hand sanitizer'],
-      priority: 'Penting',
-      quantity: '3 hari kebutuhan',
-      tips: 'Pilih kemasan travel size yang praktis'
-    }
+  title: 'Obat dan Alat Kesehatan',
+  category: 'health',
+  image: '/images/p3k.png',
+  alt: 'Obat dan alat kesehatan dasar',
+  description: 'Berisi obat-obatan dasar dan perlengkapan pertolongan pertama.',
+  items: [
+    'Obat pereda nyeri (Paracetamol/Ibuprofen)',
+    'Obat anti diare (Oralit, Diatabs)',
+    'Obat pribadi & resep dokter',
+    'Plester, Betadine, Kasa steril',
+    'Masker medis'
+  ],
+  priority: 'Sangat Penting',
+  quantity: '1 set lengkap',
+  tips: 'Periksa kondisi dan kedaluwarsa obat setiap 3 bulan.'
+},
+{
+  title: 'Identitas & Dokumen Penting',
+  category: 'identity',
+  image: '/images/dokumen.png',
+  alt: 'Dokumen penting dalam map plastik',
+  description: 'Salinan dokumen penting dalam kantong plastik kedap air.',
+  items: [
+    'KTP, KK, SIM',
+    'Kartu asuransi kesehatan',
+    'Sertifikat tanah atau rumah',
+    'Buku nikah'
+  ],
+  priority: 'Sangat Penting',
+  quantity: '1 set',
+  tips: 'Simpan di wadah kedap air agar tidak rusak.'
+},
+{
+  title: 'Uang Tunai',
+  category: 'money',
+  image: '/images/uang.png',
+  alt: 'Uang tunai untuk darurat',
+  description: 'Uang tunai secukupnya untuk kebutuhan mendesak selama evakuasi.',
+  items: ['Uang kertas pecahan kecil', 'Uang logam', 'Dompet tahan air'],
+  priority: 'Penting',
+  quantity: 'Secukupnya',
+  tips: 'Simpan dalam dompet anti-air.'
+},
+{
+  title: 'Pakaian & Barang Pribadi',
+  category: 'clothes',
+  image: '/images/pakaian.png',
+  alt: 'Pakaian ganti evakuasi',
+  description: 'Pakaian nyaman untuk situasi darurat, termasuk kebersihan pribadi.',
+  items: [
+    'Jaket ringan & tahan air',
+    'Sepatu nyaman & sandal jepit',
+    'Tisu basah & tisu toilet',
+    'Hand sanitizer',
+    'Produk kebersihan wanita',
+    'Kacamata/lensa kontak & salinannya'
+  ],
+  priority: 'Penting',
+  quantity: '2-3 set',
+  tips: 'Pilih bahan menyerap keringat & ringan.'
+},
+{
+  title: 'Peralatan Komunikasi & Informasi',
+  category: 'communication',
+  image: '/images/radio.png',
+  alt: 'Handphone dan alat komunikasi',
+  description: 'Peralatan agar tetap terhubung dengan keluarga dan informasi penting.',
+  items: [
+    'Handphone & charger',
+    'Power bank',
+    'Daftar kontak darurat',
+    'Alat tulis (pulpen & pensil)'
+  ],
+  priority: 'Sangat Penting',
+  quantity: '1 set',
+  tips: 'Letakkan dalam kantong kedap air.'
+},
+{
+  title: 'Makanan & Minuman',
+  category: 'food',
+  image: '/images/air-minum.png',
+  alt: 'Makanan dan minuman darurat',
+  description: 'Makanan instan dan air bersih untuk 3 hari pertama.',
+  items: [
+    'Air mineral botol',
+    'Makanan kaleng / instan',
+    'Botol air kosong cadangan',
+    'Alat makan sederhana'
+  ],
+  priority: 'Sangat Penting',
+  quantity: '3 hari persediaan',
+  tips: 'Periksa tanggal kadaluarsa setiap 3 bulan.'
+},
+{
+  title: 'Peralatan Tambahan',
+  category: 'tools',
+  image: '/images/tools.png',
+  alt: 'Peralatan survival tambahan',
+  description: 'Peralatan tambahan yang berguna untuk bertahan di pengungsian.',
+  items: [
+    'Peluit',
+    'Korek api / pemantik',
+    'Buku catatan & alat tulis',
+    'Tali serbaguna (paracord)',
+    'Trash bag / kantong plastik',
+    'Senter atau lampu kepala'
+  ],
+  priority: 'Penting',
+  quantity: '1 set survival',
+  tips: 'Sertakan perlengkapan pribadi lainnya sesuai kebutuhan.'
+}
+
   ];
 
   const filteredContents = selectedCategory === 'all' 
@@ -218,7 +235,7 @@ export default function TasSiagaBencanaPage() {
         </section>
 
         {/* Category Filter */}
-        <section className="max-w-7xl mx-auto px-8 py-4">
+        {/* <section className="max-w-7xl mx-auto px-8 py-4">
           <div className="flex flex-wrap gap-3 justify-center mb-8">
             {categories.map((category) => (
               <button
@@ -235,7 +252,7 @@ export default function TasSiagaBencanaPage() {
               </button>
             ))}
           </div>
-        </section>
+        </section> */}
 
         {/* Items Grid */}
         <section className="max-w-7xl mx-auto px-8 py-8">
@@ -472,15 +489,9 @@ export default function TasSiagaBencanaPage() {
                     </div>
                   </div>
 
-                  <div className="bg-slate-100 rounded-xl p-6">
-                    <h4 className="text-lg font-semibold text-slate-800 mb-2">Deskripsi</h4>
-                    <p className="text-slate-700 leading-relaxed">{modalContent.description}</p>
-                  </div>
+                  
 
-                  <div className="bg-blue-50 rounded-xl p-6 border-l-4 border-blue-500">
-                    <h4 className="text-lg font-semibold text-blue-800 mb-2">Tips</h4>
-                    <p className="text-blue-700 leading-relaxed italic">{modalContent.tips}</p>
-                  </div>
+                  
                 </div>
 
                 <div className="space-y-4">
@@ -491,6 +502,15 @@ export default function TasSiagaBencanaPage() {
                         <li key={idx}>{item}</li>
                       ))}
                     </ul>
+                  </div>
+                  <div className="bg-blue-50 rounded-xl p-6 border-l-4 border-blue-500">
+                    <h4 className="text-lg font-semibold text-blue-800 mb-2">Tips</h4>
+                    <p className="text-blue-700 leading-relaxed italic">{modalContent.tips}</p>
+                  </div>
+
+                  <div className="bg-slate-100 rounded-xl p-6">
+                    <h4 className="text-lg font-semibold text-slate-800 mb-2">Deskripsi</h4>
+                    <p className="text-slate-700 leading-relaxed">{modalContent.description}</p>
                   </div>
                 </div>
               </div>
