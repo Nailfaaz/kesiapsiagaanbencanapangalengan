@@ -178,7 +178,11 @@ export default function BencanaUmumPage() {
                   height={200}
                   className="object-contain w-full"
                 />
-                <p className="text-base text-[0.5vw] font-semibold text-black justify-center "> Peta Geologi dan Stratigrafi Regional Bandung Selatan (Sillitongga,1993)</p>
+                <p className="text-base text-[0.5vw] font-semibold text-black justify-center ">
+                  {" "}
+                  Peta Geologi dan Stratigrafi Regional Bandung Selatan
+                  (Sillitongga,1993)
+                </p>
               </div>
 
               {/* Teks deskripsi */}
@@ -374,11 +378,14 @@ export default function BencanaUmumPage() {
               </h2>
               <p className="text-slate-600 text-base sm:text-lg">
                 Klik tombol di bawah untuk melihat materi dan informasi seputar
-                bencana.
+                Bahaya dan Mitigasi Bencana Geologi.
               </p>
               <button
                 onClick={() => {
-                  /* ganti dengan aksi navigasi/link Anda */
+                  window.open(
+                    "https://docs.google.com/presentation/d/1yFcMohHaG3iIbvkyLth6FkTbtQAo3NljbG5auPqT2pA/edit?slide=id.p1#slide=id.p1",
+                    "_blank"
+                  );
                 }}
                 className="mt-4 px-6 py-3 bg-gradient-to-r from-blue-500 to-purple-500 text-white font-semibold rounded-lg hover:from-blue-600 hover:to-purple-600 transition-all duration-300 transform hover:scale-105"
               >

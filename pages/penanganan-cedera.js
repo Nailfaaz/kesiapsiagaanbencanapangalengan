@@ -544,11 +544,14 @@ const InjuryGuideApp = () => {
               </h2>
               <p className="text-slate-600 text-base sm:text-lg">
                 Klik tombol di bawah untuk melihat materi dan informasi seputar
-                bencana.
+                Pertolongan Kebencanaan.
               </p>
               <button
                 onClick={() => {
-                  /* ganti dengan aksi navigasi/link Anda */
+                  window.open(
+                    "https://www.canva.com/design/DAGqPK4Ad0Q/Frc_qRkQ4GCvFnfI6VexWw/edit?ui=eyJBIjp7fX0",
+                    "_blank"
+                  );
                 }}
                 className="mt-4 px-6 py-3 bg-gradient-to-r from-blue-500 to-purple-500 text-white font-semibold rounded-lg hover:from-blue-600 hover:to-purple-600 transition-all duration-300 transform hover:scale-105"
               >

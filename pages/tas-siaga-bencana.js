@@ -442,11 +442,14 @@ export default function TasSiagaBencanaPage() {
               </h2>
               <p className="text-slate-600 text-base sm:text-lg">
                 Klik tombol di bawah untuk melihat materi dan informasi seputar
-                bencana.
+                Tas Siaga Bencana.
               </p>
               <button
                 onClick={() => {
-                  /* ganti dengan aksi navigasi/link Anda */
+                  window.open(
+                    "https://www.canva.com/design/DAGsQCG--BI/2IHsfApNbk3ytu_0lKR4hQ/edit",
+                    "_blank"
+                  );
                 }}
                 className="mt-4 px-6 py-3 bg-gradient-to-r from-blue-500 to-purple-500 text-white font-semibold rounded-lg hover:from-blue-600 hover:to-purple-600 transition-all duration-300 transform hover:scale-105"
               >
