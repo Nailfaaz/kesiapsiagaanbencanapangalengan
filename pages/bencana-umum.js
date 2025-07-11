@@ -9,7 +9,7 @@ export default function BencanaUmumPage() {
   const disasters = [
     {
       title: "Banjir",
-      image: "/api/placeholder/600/400",
+      image: "/images/flood.png",
       alt: "Gambar ilustrasi banjir",
       description:
         "Banjir adalah peristiwa meluapnya air ke daratan yang biasanya kering. Peristiwa ini dapat disebabkan oleh berbagai faktor dan dapat menimbulkan dampak serius terhadap kehidupan masyarakat.",
@@ -47,7 +47,7 @@ export default function BencanaUmumPage() {
     },
     {
       title: "Gempa Bumi",
-      image: "/api/placeholder/600/400",
+      image: "/images/earthquake.png",
       alt: "Gambar ilustrasi gempa bumi",
       description:
         "Gempa bumi adalah guncangan di permukaan bumi akibat pergeseran lempeng tektonik secara tiba-tiba yang bisa menyebabkan kerusakan.",
@@ -83,7 +83,7 @@ export default function BencanaUmumPage() {
     },
     {
       title: "Tanah Longsor",
-      image: "/api/placeholder/600/400",
+      image: "/images/landslide.png",
       alt: "Gambar ilustrasi tanah longsor",
       description:
         "Tanah longsor adalah pergerakan tanah dan batu dari lereng yang dipicu oleh hujan deras, lereng curam, atau aktivitas manusia seperti penebangan liar.",
