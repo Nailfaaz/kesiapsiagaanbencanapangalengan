@@ -23,7 +23,7 @@ export default function TasSiagaBencanaPage() {
     {
   title: 'Obat dan Alat Kesehatan',
   category: 'health',
-  image: '/images/p3k.png',
+  image: '/images/medicine.png',
   alt: 'Obat dan alat kesehatan dasar',
   description: 'Berisi obat-obatan dasar dan perlengkapan pertolongan pertama.',
   items: [
@@ -40,7 +40,7 @@ export default function TasSiagaBencanaPage() {
 {
   title: 'Identitas & Dokumen Penting',
   category: 'identity',
-  image: '/images/dokumen.png',
+  image: '/images/document.png',
   alt: 'Dokumen penting dalam map plastik',
   description: 'Salinan dokumen penting dalam kantong plastik kedap air.',
   items: [
@@ -56,7 +56,7 @@ export default function TasSiagaBencanaPage() {
 {
   title: 'Uang Tunai',
   category: 'money',
-  image: '/images/uang.png',
+  image: '/images/cash.png',
   alt: 'Uang tunai untuk darurat',
   description: 'Uang tunai secukupnya untuk kebutuhan mendesak selama evakuasi.',
   items: ['Uang kertas pecahan kecil', 'Uang logam', 'Dompet tahan air'],
@@ -67,7 +67,7 @@ export default function TasSiagaBencanaPage() {
 {
   title: 'Pakaian & Barang Pribadi',
   category: 'clothes',
-  image: '/images/pakaian.png',
+  image: '/images/clothes.png',
   alt: 'Pakaian ganti evakuasi',
   description: 'Pakaian nyaman untuk situasi darurat, termasuk kebersihan pribadi.',
   items: [
@@ -85,7 +85,7 @@ export default function TasSiagaBencanaPage() {
 {
   title: 'Peralatan Komunikasi & Informasi',
   category: 'communication',
-  image: '/images/radio.png',
+  image: '/images/device.png',
   alt: 'Handphone dan alat komunikasi',
   description: 'Peralatan agar tetap terhubung dengan keluarga dan informasi penting.',
   items: [
@@ -101,11 +101,11 @@ export default function TasSiagaBencanaPage() {
 {
   title: 'Makanan & Minuman',
   category: 'food',
-  image: '/images/air-minum.png',
+  image: '/images/foods.png',
   alt: 'Makanan dan minuman darurat',
   description: 'Makanan instan dan air bersih untuk 3 hari pertama.',
   items: [
-    'Air mineral botol',
+    'Air mineral botol',  
     'Makanan kaleng / instan',
     'Botol air kosong cadangan',
     'Alat makan sederhana'
@@ -216,7 +216,7 @@ export default function TasSiagaBencanaPage() {
 
                 <div className="relative overflow-hidden rounded-2xl shadow-lg group">
                   <Image
-                    src="/images/tas-siaga-bencana.png"
+                    src="/images/Tas_Siaga_Bencana.png"
                     alt="Ilustrasi Tas Siaga Bencana"
                     width={600}
                     height={400}
