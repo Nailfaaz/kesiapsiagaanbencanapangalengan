@@ -48,7 +48,7 @@ const cardData = [
     title: 'Assessment Siaga Bencana',
     name: 'Jovanca Vebiane',
     date: '4 Juni 2025',
-    image: '/images/assessment.png',
+    image: '/images/task.png',
     alt: 'Gambar assessment kesiapsiagaan',
     path: 'https://forms.gle/s9hGnmCaxsfkpjkY6', // External link
     color: 'from-indigo-500 to-purple-500',
